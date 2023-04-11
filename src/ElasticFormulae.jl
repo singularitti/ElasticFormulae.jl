@@ -1,9 +1,9 @@
 module ElasticFormulae
 
-using LinearAlgebra: UpperTriangular, dot
+using LinearAlgebra: dot
 using SymEngine
 
-export symmetrize, elastic_energy, sij, Sij
+export elastic_energy, sij, Sij
 
 elastic_energy(c, ϵ) = expand(dot(ϵ, c, ϵ) / 2)
 
