@@ -3,6 +3,10 @@ uuid = "2859f306-fd80-4f92-953f-01b84c6698a5"
 authors = ["singularitti <singularitti@outlook.com> and contributors"]
 version = "1.0.0-DEV"
 
+[deps]
+LinearAlgebra = "37e2e46d-f89d-539d-b4ee-838fcccc9c8e"
+SymEngine = "123dc426-2d89-5057-bbad-38513e3affd8"
+
 [compat]
 julia = "1"
 
