@@ -13,8 +13,13 @@ tet = {{c11, c12, c13, 0, 0, c16}, {0, c11, c13, 0, 0, -c16}, {0, 0,
 
 cj = {c11, c33, c12, c13, c16, c44, c66};
 
-Length[cj] == 7
+(*Length[cj] == 7*)
 
 f = ElasticEnergy[tet]
 
-S[f, cj] // MatrixForm
+s = S[f, cj];
+
+s // MatrixForm
+
+
+Examine[s, cj, f]

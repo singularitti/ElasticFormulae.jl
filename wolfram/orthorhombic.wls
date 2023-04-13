@@ -15,6 +15,11 @@ cj = {c11, c22, c33, c12, c13, c23, c44, c55, c66};
 
 f = ElasticEnergy[orth]
 
-Length[cj] == 9
+(*Length[cj] == 9*)
 
-S[f, cj] // MatrixForm
+s = S[f, cj];
+
+s // MatrixForm
+
+
+Examine[s, cj, f]
