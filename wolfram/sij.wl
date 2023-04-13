@@ -10,6 +10,8 @@ Sij::usage = "Calculate matrix element S[i, j]."
 
 S::usage = "Calculate matrix S."
 
+Examine::usage = "Examine whether the S matrix is correct."
+
 Begin["`Private`"]
 
 \[Epsilon] = {Global`\[Epsilon]1, Global`\[Epsilon]2, Global`\[Epsilon]3,
@@ -27,6 +29,8 @@ Sij[f_, \[Epsilon]i_, cj_] :=
 S[f_, c_] :=
     Table[Sij[f, \[Epsilon][[i]], c[[j]]], {i, 1, 6}, {j, 1, Length[c
         ]}] // Simplify
+
+Examine[S_, c_, f_] := PossibleZeroQ[S . c . \[Epsilon] / 2 - f]
 
 End[]
 
